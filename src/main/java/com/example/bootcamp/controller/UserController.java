@@ -17,6 +17,11 @@ public class UserController {
         this.userService = userService;
     }
 
+    @PostMapping("/register")
+    public ResponseEntity<UserDTO> registerUser(@RequestBody UserDTO userDTO) {
+        return ResponseEntity.ok(userService.registerUser(userDTO));
+    }
+
     //существующий endpoint для получения всех пользователей
     @GetMapping
     public List<UserDTO> getAllUsers() {

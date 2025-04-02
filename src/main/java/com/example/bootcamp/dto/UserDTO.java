@@ -26,6 +26,14 @@ public class UserDTO {
     private String description;
     private Integer rating;
 
+    private String username;
+
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+
+
+
+
     //геттеры и сеттеры
 
     public long getId() {
@@ -135,4 +143,11 @@ public class UserDTO {
     public void setRating(Integer rating) {
         this.rating = rating;
     }
+
+
+
+    private String password; // Добавляем пароль
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
 }

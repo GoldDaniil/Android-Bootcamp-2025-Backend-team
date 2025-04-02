@@ -291,6 +291,10 @@
 для включения/отключения уведомлений.
 - Проверить сохранение предпочтений в профиле.
 
+ALTER TABLE users ALTER COLUMN id RESTART WITH 8;
+SELECT * FROM users;
+
+
 
 #### Ссылка на схему БД: 
 https://dbdiagram.io/d/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Untitled-Diagram-679cdcce263d6cf9a0a5a726

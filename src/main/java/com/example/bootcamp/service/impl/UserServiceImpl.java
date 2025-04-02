@@ -30,6 +30,28 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public UserDTO registerUser(UserDTO userDTO) {
+        // Проверяем, нет ли уже пользователя с таким email
+        if (userRepository.findByEmail(userDTO.getEmail()).isPresent()) {
+            throw new RuntimeException("Email already in use!");
+        }
+
+        User user = new User();
+        user.setFirstName(userDTO.getFirstName());
+        user.setSecondName(userDTO.getSecondName());
+        user.setEmail(userDTO.getEmail());
+        user.setPassword(userDTO.getPassword()); // Пароль без шифрования
+        user.setRole("USER"); // Добавляем роль
+        user.setUsername(userDTO.getUsername()); // Устанавливаем username
+
+        return UserMapper.convertToDto(userRepository.save(user));
+    }
+
+
+
+
+
+    @Override
     public List<UserDTO> getAllUsers() {
         return userRepository.findAll().stream()
                 .map(UserMapper::convertToDto)

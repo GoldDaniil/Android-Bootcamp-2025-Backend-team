@@ -19,4 +19,8 @@ public interface UserService {
 
     //новый метод для получения рейтинга
     Double getUserRating(Long id);
+
+
+    UserDTO registerUser(UserDTO userDTO);
+
 }

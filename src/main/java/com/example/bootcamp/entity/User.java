@@ -14,7 +14,7 @@ import java.util.Collections;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Автоинкремент
     private Long id;
 
     @Column(name = "first_name")
@@ -57,11 +57,10 @@ public class User {
     @Column(name = "rating")
     private Integer rating;
 
-    @Column(name = "password")
-    private String password;
+
 
     // Новый поля для пользователя
-    @Column(name = "username")
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
 
     // Геттеры и сеттеры
@@ -179,20 +178,17 @@ public class User {
     }
 
     // password
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
-    // username (геттер и сеттер)
-    public String getUsername() {
-        return username;
-    }
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    @Column(name = "password") // Добавляем поле пароля
+    private String password;
+
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
+
+
+
 }

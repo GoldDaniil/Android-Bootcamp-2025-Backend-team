@@ -5,4 +5,4 @@ id;first_name;second_name;email;phone_number;volunteer_center_id;role;status;cre
 4;"Даня";"Сидоров";"danya@example.com";"+79001234567";4;"USER";"active";2025-01-03 12:00:00;"https://example.com/avatars/ivan.jpg";50;51;"dddd";2;fourgold;YWRtaW4xMTAw
 5;"Игорь";"Месси";"igor@example.com";"+79009876543";5;"USER";"active";2025-01-04 01:00:00;"https://example.com/avatars/ivan.jpg";60;61;"eeee";1;fivegold;YWRtaW4xMTAx
 6;"Семен";"Роналду";"semen@example.com";"+79029476543";5;"USER";"inactive";2025-01-07 05:30:00;"https://example.com/avatars/ivan.jpg";70;71;"ffff";4;sixgold;YWRtaW4xMTEw
-7;"Валентин";"Джанлуиджи";"valya@example.com";"+79705874343";5;"USER";"inactive";2025-01-07 02:00:00;"https://example.com/avatars/ivan.jpg";80;81;hhhh";5;sevengold;YWRtaW4xMTEx
+7;"Валентин";"Джанлуиджи";"valya@example.com";"+79705874343";5;"USER";"inactive";2025-01-07 02:00:00;"https://example.com/avatars/ivan.jpg";80;81;"hhhh";5;sevengold;YWRtaW4xMTEx
